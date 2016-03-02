@@ -1,9 +1,7 @@
 package me.aheadlcx.nicepai.cate;
 
-import java.util.List;
-
 import me.aheadlcx.nicepai.model.service.response.CateResponse;
-import retrofit2.http.FormUrlEncoded;
+import retrofit2.Response;
 import retrofit2.http.GET;
 import retrofit2.http.Query;
 import rx.Observable;
@@ -15,8 +13,8 @@ import rx.Observable;
  */
 public interface CateService {
 //    @GET("m/cate2_channel?cateid={cateid}&page={page}")
-    @FormUrlEncoded
     @GET("m/cate2_channel")
-    Observable<List<CateResponse.CateBean>> getCateLists(@Query("cateid") String cateid, @Query
-            ("page") String page, @Query("per") String per);
+    Observable<Response<CateResponse>> getCateLists(@Query("cateid") String cateid, @Query
+            ("page") String page, @Query("per") String per );
+
 }
