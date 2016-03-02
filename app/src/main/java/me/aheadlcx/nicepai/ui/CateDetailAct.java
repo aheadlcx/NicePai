@@ -43,5 +43,21 @@ public class CateDetailAct extends BaseActivity {
         ArrayList<Video> videos = new ArrayList<>();
         videos.add(video);
         videoPlayer.loadMultipleVideo(videos);
+        videoPlayer.setVideoPlayCallback(new SuperVideoPlayer.VideoPlayCallbackImpl() {
+            @Override
+            public void onCloseVideo() {
+
+            }
+
+            @Override
+            public void onSwitchPageType() {
+
+            }
+
+            @Override
+            public void onPlayFinish() {
+
+            }
+        });
     }
 }
