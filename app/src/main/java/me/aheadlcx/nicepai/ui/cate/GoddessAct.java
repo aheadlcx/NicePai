@@ -1,4 +1,4 @@
-package me.aheadlcx.nicepai.cate;
+package me.aheadlcx.nicepai.ui.cate;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -17,7 +17,7 @@ public class GoddessAct extends BaseActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getSupportFragmentManager().beginTransaction().add(Window.ID_ANDROID_CONTENT, new GoddessFrag(), TAG)
+        getSupportFragmentManager().beginTransaction().add(Window.ID_ANDROID_CONTENT, new CateFrag(), TAG)
                 .commit();
     }
 }

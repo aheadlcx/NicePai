@@ -1,4 +1,4 @@
-package me.aheadlcx.nicepai.cate;
+package me.aheadlcx.nicepai.ui.cate;
 
 /**
  * Description:

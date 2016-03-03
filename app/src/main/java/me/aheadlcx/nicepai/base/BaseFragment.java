@@ -2,6 +2,8 @@ package me.aheadlcx.nicepai.base;
 
 import android.support.v4.app.Fragment;
 
+import com.google.gson.Gson;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -41,10 +43,22 @@ public class BaseFragment extends Fragment {
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl("http://api.miaopai.com/")
                 .client(new OkHttpClient())
-                .addConverterFactory(GsonConverterFactory.create())
+                .addConverterFactory(GsonConverterFactory.create(new Gson()))
                 .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
                 .build();
 
         return retrofit;
+    }
+
+    @Override
+    public void setUserVisibleHint(boolean isVisibleToUser) {
+        super.setUserVisibleHint(isVisibleToUser);
+        if (isVisibleToUser){
+            onResumeFrag();
+        }
+    }
+
+    private void onResumeFrag() {
+
     }
 }

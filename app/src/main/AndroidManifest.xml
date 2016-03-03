@@ -14,17 +14,24 @@
 
         </activity>
 
-        <activity android:name=".cate.GoddessAct">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
+        <activity android:name=".ui.cate.GoddessAct">
 
-                <category android:name="android.intent.category.LAUNCHER"/>
-            </intent-filter>
 
         </activity>
         <activity android:name=".ui.CateDetailAct">
 
         </activity>
+
+        <activity android:name=".ui.catelist.CateMainAct"
+            android:theme="@style/AppTheme"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
     </application>
 
 </manifest>

@@ -1,7 +1,5 @@
 package me.aheadlcx.nicepai.model.service.response.cate;
 
-import java.util.List;
-
 /**
  * Description:
  * Creator: ZhangJinWei
@@ -63,7 +61,8 @@ public class ChannelEntity {
      */
 
     private Ext2Entity ext2;
-    private List<String> topicinfo;
+//        private List<String> topicinfo;
+//    private String[] topicinfo;
 
     public void setScid(String scid) {
         this.scid = scid;
@@ -97,9 +96,6 @@ public class ChannelEntity {
         this.ext2 = ext2;
     }
 
-    public void setTopicinfo(List<String> topicinfo) {
-        this.topicinfo = topicinfo;
-    }
 
     public String getScid() {
         return scid;
@@ -133,9 +129,6 @@ public class ChannelEntity {
         return ext2;
     }
 
-    public List<String> getTopicinfo() {
-        return topicinfo;
-    }
 
     public static class StatEntity {
         private int vcnt;
