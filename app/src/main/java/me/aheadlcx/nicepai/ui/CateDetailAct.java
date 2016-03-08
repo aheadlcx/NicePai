@@ -56,7 +56,7 @@ public class CateDetailAct extends BaseActivity {
 
             @Override
             public void onPlayFinish() {
-
+                CateDetailAct.this.finish();
             }
         });
     }
