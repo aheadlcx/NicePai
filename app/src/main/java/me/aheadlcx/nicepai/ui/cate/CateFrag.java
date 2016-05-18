@@ -26,6 +26,7 @@ import me.aheadlcx.nicepai.model.service.response.CateResponse;
 import me.aheadlcx.nicepai.model.service.response.cate.CateBean;
 import me.aheadlcx.nicepai.model.service.response.catelist.CateBaseInfo;
 import me.aheadlcx.nicepai.ui.CateDetailAct;
+import me.aheadlcx.nicepai.widget.RecycleViewAutoScrollHelper;
 import retrofit2.Response;
 import rx.Observable;
 import rx.Subscriber;
@@ -206,12 +207,17 @@ public class CateFrag extends BaseFragment {
         });
 
 
-        mRecyclerView.setLayoutManager(new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL));
+        mRecyclerView.setLayoutManager(new StaggeredGridLayoutManager(2,
+                StaggeredGridLayoutManager.VERTICAL));
         mRecyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {
             @Override
             public void onScrolled(RecyclerView recyclerView, int dx, int dy) {
                 super.onScrolled(recyclerView, dx, dy);
             }
         });
+
+        RecycleViewAutoScrollHelper scrollHelper = new RecycleViewAutoScrollHelper(mRecyclerView);
+        scrollHelper.setEnabled(true);
+        mRecyclerView.setOnTouchListener(scrollHelper);
     }
 }

@@ -1,27 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     >
 
     <data>
+
         <import type="android.view.View"/>
+
         <variable
             name="cate"
             type="me.aheadlcx.nicepai.model.service.response.cate.CateBean"></variable>
+
         <import type="android.text.TextUtils"/>
+
         <import type="me.aheadlcx.nicepai.util.Utils"/>
     </data>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:paddingLeft="2dp"
-        android:paddingRight="2dp"
-        android:paddingTop="2dp"
         android:background="@drawable/bg_card"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:paddingLeft="2dp"
+        android:id="@+id/itemCate"
+        android:paddingRight="2dp"
+        android:paddingTop="2dp">
 
         <me.aheadlcx.nicepai.widget.SquareImageView
             android:id="@+id/imgCateItem"
@@ -31,11 +36,11 @@
         <TextView
             android:id="@+id/txtCateItem"
             android:layout_width="match_parent"
-            android:padding="8dp"
-            android:visibility="@{TextUtils.isEmpty(cate.channel.ext.t) ? View.GONE : View.VISIBLE}"
             android:layout_height="wrap_content"
             android:gravity="center"
+            android:padding="8dp"
             android:text="@{cate.channel.ext.t}"
+            android:visibility="@{TextUtils.isEmpty(cate.channel.ext.t) ? View.GONE : View.VISIBLE}"
             tools:text="你好啊"/>
         <!--android:visibility="@{cate.isEmpty ? View.GONE : View.VISIBLE}"-->
 

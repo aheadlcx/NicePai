@@ -4,6 +4,17 @@ android {
     compileSdkVersion 23
     buildToolsVersion "23.0.2"
 
+    signingConfigs{
+        debug{
+            storeFile file('debug.keystore')
+        }
+        release{
+            storeFile file('aheadlcx.keystore')
+            storePassword "aheadlcx"
+            keyAlias "aheadlcx"
+            keyPassword "aheadlcx"
+        }
+    }
     defaultConfig {
         applicationId "me.aheadlcx.nicepai"
         minSdkVersion 14
@@ -14,6 +25,7 @@ android {
     buildTypes {
         release {
             minifyEnabled false
+            signingConfig signingConfigs.release
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }

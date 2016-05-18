@@ -48,7 +48,7 @@ public class CateAdapter extends RecyclerView.Adapter<CateAdapter.CateHolder> {
     @Override
     public void onBindViewHolder(CateHolder holder, final int position) {
         holder.bind(lists.get(position));
-        holder.itemView.setOnClickListener(new View.OnClickListener() {
+        holder.imgCateItem.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (mCallBack != null) {
@@ -69,10 +69,12 @@ public class CateAdapter extends RecyclerView.Adapter<CateAdapter.CateHolder> {
     public static class CateHolder extends RecyclerView.ViewHolder{
         private ItemCateBinding mBinding;
         private ImageView imgCateItem;
+        private View itemCate;
         public CateHolder(View itemView) {
             super(itemView);
             mBinding = ItemCateBinding.bind(itemView);
             imgCateItem = mBinding.imgCateItem;
+            itemCate = mBinding.itemCate;
         }
 
         public void bind(CateBean bean){
