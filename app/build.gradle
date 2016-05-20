@@ -37,18 +37,24 @@ android {
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     testCompile 'junit:junit:4.12'
-    compile 'com.android.support:appcompat-v7:23.2.0'
-    compile 'com.squareup.retrofit2:retrofit:2.0.0-beta4'
-    compile 'io.reactivex:rxandroid:1.1.0'
-    compile 'io.reactivex:rxjava:1.1.0'
-    compile 'com.google.code.gson:gson:2.6.2'
-    compile 'com.squareup.okhttp3:okhttp:3.2.0'
-    compile 'com.squareup.retrofit2:converter-gson:2.0.0-beta4'
-    compile 'com.squareup.retrofit2:adapter-rxjava:2.0.0-beta4'
-    compile 'com.github.bumptech.glide:glide:3.7.0'
-    compile 'com.android.support:recyclerview-v7:23.+'
+//    compile 'com.android.support:appcompat-v7:23.2.0'
+//    compile 'com.android.support:recyclerview-v7:23.+'
     compile 'com.github.xiongwei-git:wkzfLib:v2.1'
-    compile 'com.android.support:design:23.2.0'
+//    compile 'com.android.support:design:23.2.0'
     compile 'com.github.castorflex.smoothprogressbar:library-circular:1.2.0'
+
+    def nicepaeDependencies = rootProject.ext.nicepaeDependencies
+    compile nicepaeDependencies.daggerCompiler
+    compile nicepaeDependencies.dagger
+    compile nicepaeDependencies.recyclerView
+    compile nicepaeDependencies.rxJava
+    compile nicepaeDependencies.rxAndroid
+    compile nicepaeDependencies.okHttp
+    compile nicepaeDependencies.retrofit
+    compile nicepaeDependencies.retrofitConverter
+    compile nicepaeDependencies.retroRxAdapter
+    compile nicepaeDependencies.glide
+    compile nicepaeDependencies.appcompat
+    compile nicepaeDependencies.design
 
 }
