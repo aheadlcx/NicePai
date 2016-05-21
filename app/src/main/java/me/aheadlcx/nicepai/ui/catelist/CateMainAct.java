@@ -64,7 +64,7 @@ public class CateMainAct extends BaseActivity {
                 .map(new Func1<CateListResponse, List<CateBaseInfo>>() {
                     @Override
                     public List<CateBaseInfo> call(CateListResponse cateListResponse) {
-                        if (cateListResponse.getResult() != null){
+                        if (cateListResponse.getResult() != null) {
                             return cateListResponse.getResult();
                         }
                         return null;
@@ -79,7 +79,7 @@ public class CateMainAct extends BaseActivity {
 
                     @Override
                     public void onError(Throwable e) {
-                        Log.i(TAG, "onError: ");
+                        Log.i(TAG, "onError: " + e.toString() + " --- message --" + e.getMessage());
                     }
 
                     @Override
@@ -101,8 +101,9 @@ public class CateMainAct extends BaseActivity {
         tabs.setTabMode(TabLayout.MODE_SCROLLABLE);
     }
 
-    public class Adapter extends FragmentPagerAdapter{
+    public class Adapter extends FragmentPagerAdapter {
         List<CateBaseInfo> lists;
+
         public Adapter(FragmentManager fm, List<CateBaseInfo> lists) {
             super(fm);
             this.lists = lists;
@@ -115,11 +116,11 @@ public class CateMainAct extends BaseActivity {
             bundle.putSerializable("cateBaseInfo", cateBaseInfo);
             Fragment instance;
             if (cateBaseInfo.getCategoryName() != null && cateBaseInfo.getCategoryName().equals
-                    ("热门")){
-                 instance = HotCateFrag.getInstance(bundle);
+                    ("热门")) {
+                instance = HotCateFrag.getInstance(bundle);
 
-            }else {
-                 instance = CateFrag.getInstance(bundle);
+            } else {
+                instance = CateFrag.getInstance(bundle);
 
             }
             return instance;
