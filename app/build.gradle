@@ -37,16 +37,16 @@ android {
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     testCompile 'junit:junit:4.12'
-//    compile 'com.android.support:appcompat-v7:23.2.0'
-//    compile 'com.android.support:recyclerview-v7:23.+'
+    compile 'com.android.support:appcompat-v7:23.2.0'
+    compile 'com.android.support:recyclerview-v7:23.+'
     compile 'com.github.xiongwei-git:wkzfLib:v2.1'
-//    compile 'com.android.support:design:23.2.0'
+    compile 'com.android.support:design:23.2.0'
     compile 'com.github.castorflex.smoothprogressbar:library-circular:1.2.0'
 
     def nicepaeDependencies = rootProject.ext.nicepaeDependencies
     compile nicepaeDependencies.daggerCompiler
     compile nicepaeDependencies.dagger
-    compile nicepaeDependencies.recyclerView
+//    compile nicepaeDependencies.recyclerView
     compile nicepaeDependencies.rxJava
     compile nicepaeDependencies.rxAndroid
     compile nicepaeDependencies.okHttp
@@ -54,7 +54,7 @@ dependencies {
     compile nicepaeDependencies.retrofitConverter
     compile nicepaeDependencies.retroRxAdapter
     compile nicepaeDependencies.glide
-    compile nicepaeDependencies.appcompat
-    compile nicepaeDependencies.design
+//    compile nicepaeDependencies.appcompat
+//    compile nicepaeDependencies.design
 
 }
