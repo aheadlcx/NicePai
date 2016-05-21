@@ -22,16 +22,20 @@
 
         </activity>
 
-        <activity android:name=".ui.catelist.CateMainAct"
+        <activity
+            android:name=".ui.catelist.CateMainAct"
             android:theme="@style/AppTheme"
             >
+
+        </activity>
+
+        <activity android:name=".test.TestDaggerAct">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-
     </application>
 
 </manifest>
