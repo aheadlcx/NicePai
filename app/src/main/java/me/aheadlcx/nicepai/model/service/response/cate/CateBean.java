@@ -1,13 +1,13 @@
 package me.aheadlcx.nicepai.model.service.response.cate;
 
-import android.databinding.BaseObservable;
 
 /**
  * Description:
  * Creator: ZhangJinWei
  * Date:16/3/1 下午5:54
  */
-public class CateBean extends BaseObservable {
+//public class CateBean extends BaseObservable {
+public class CateBean  {
     private String type;
 
     private ChannelEntity channel;

@@ -12,11 +12,14 @@ import javax.inject.Inject;
 public class TestDagger {
 
     private static final String TAG = "TestDagger";
+    private int  level;
     @Inject
     public TestDagger() {
+        level = 1;
     }
 
     public void show(){
         Log.i(TAG, "show: ");
+        Log.e(TAG, "show: ");
     }
 }

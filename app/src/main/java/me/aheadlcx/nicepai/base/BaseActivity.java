@@ -5,6 +5,8 @@ import android.support.v7.app.AppCompatActivity;
 import java.util.ArrayList;
 import java.util.List;
 
+import me.aheadlcx.nicepai.App;
+import me.aheadlcx.nicepai.internal.di.component.ApplicationComponent;
 import okhttp3.OkHttpClient;
 import retrofit2.Retrofit;
 import retrofit2.adapter.rxjava.RxJavaCallAdapterFactory;
@@ -19,15 +21,15 @@ import rx.Subscription;
 public class BaseActivity extends AppCompatActivity {
     private List<Subscription> mSubscriptions = new ArrayList<>();
 
-    public void addSubscription(Subscription subscription){
+    public void addSubscription(Subscription subscription) {
         mSubscriptions.add(subscription);
     }
 
     @Override
     protected void onDestroy() {
-        if (mSubscriptions != null && mSubscriptions.size() >0) {
-            for (Subscription subscription: mSubscriptions) {
-                if (subscription.isUnsubscribed()){
+        if (mSubscriptions != null && mSubscriptions.size() > 0) {
+            for (Subscription subscription : mSubscriptions) {
+                if (subscription.isUnsubscribed()) {
                     subscription.unsubscribe();
                 }
             }
@@ -35,7 +37,7 @@ public class BaseActivity extends AppCompatActivity {
         super.onDestroy();
     }
 
-    public Retrofit getRetrofit(){
+    public Retrofit getRetrofit() {
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl("http://api.miaopai.com/")
                 .client(new OkHttpClient())
@@ -44,5 +46,9 @@ public class BaseActivity extends AppCompatActivity {
                 .build();
 
         return retrofit;
+    }
+
+    public ApplicationComponent getApplicationComponent() {
+        return ((App) (getApplication())).getApplicationComponent();
     }
 }

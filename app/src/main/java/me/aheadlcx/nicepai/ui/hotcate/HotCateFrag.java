@@ -2,6 +2,10 @@ package me.aheadlcx.nicepai.ui.hotcate;
 
 import android.os.Bundle;
 
+import me.aheadlcx.nicepai.App;
+import me.aheadlcx.nicepai.internal.di.component.DaggerHotCateComponent;
+import me.aheadlcx.nicepai.internal.di.component.HotCateComponent;
+import me.aheadlcx.nicepai.internal.di.modules.HoteCateModule;
 import me.aheadlcx.nicepai.model.service.response.CateResponse;
 import me.aheadlcx.nicepai.ui.cate.CateFrag;
 import retrofit2.Response;
@@ -21,10 +25,28 @@ public class HotCateFrag extends CateFrag {
         return cateLists;
     }
 
+    HoteCateModule mHoteCateModule;
+    HotCateComponent mHotCateComponent;
+
     public static HotCateFrag getInstance(Bundle bundle) {
         HotCateFrag frag = new HotCateFrag();
         frag.setArguments(bundle);
         return frag;
     }
 
+    @Override
+    public void initCateId() {
+        mHoteCateModule = new HoteCateModule(mCateBaseInfo.getCategoryId() + "");
+    }
+
+    @Override
+    public void initInject() {
+//        mCateComponent = DaggerCateComponent.builder().applicationComponent(App.getApp().getApplicationComponent())
+//                .cateModule(mCateModule).build();
+
+        mHotCateComponent = DaggerHotCateComponent.builder().applicationComponent(App.getApp()
+                .getApplicationComponent()).hoteCateModule(mHoteCateModule).build();
+        mHotCateComponent.inject(this);
+        mPresent.setCateUi(this);
+    }
 }

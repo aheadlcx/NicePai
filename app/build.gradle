@@ -1,14 +1,28 @@
 apply plugin: 'com.android.application'
+apply plugin: 'com.neenbedankt.android-apt'
+apply plugin: 'me.tatarka.retrolambda'
+
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'me.tatarka:gradle-retrolambda:3.2.5'
+    }
+}
+repositories {
+    mavenCentral()
+}
 
 android {
     compileSdkVersion 23
     buildToolsVersion "23.0.2"
 
-    signingConfigs{
-        debug{
+    signingConfigs {
+        debug {
             storeFile file('debug.keystore')
         }
-        release{
+        release {
             storeFile file('aheadlcx.keystore')
             storePassword "aheadlcx"
             keyAlias "aheadlcx"
@@ -28,10 +42,20 @@ android {
             signingConfig signingConfigs.release
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
+
+        debug{
+            debuggable true
+        }
     }
-    dataBinding{
-        enabled = true
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
     }
+
+//    dataBinding{
+//        enabled = true
+//    }
 }
 
 dependencies {
@@ -54,7 +78,14 @@ dependencies {
     compile nicepaeDependencies.retrofitConverter
     compile nicepaeDependencies.retroRxAdapter
     compile nicepaeDependencies.glide
+    compile nicepaeDependencies.oklog
+
+    compile nicepaeDependencies.javaxAnnotation
+    compile nicepaeDependencies.androidAnnotations
 //    compile nicepaeDependencies.appcompat
 //    compile nicepaeDependencies.design
+//    apt "com.google.dagger:dagger-compiler:2.0.2"
+
+    provided 'javax.annotation:jsr250-api:1.0'
 
 }

@@ -7,8 +7,26 @@
     <TextView
         android:id="@+id/txtShow"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:text="show world"
         android:textSize="30dp"/>
+
+    <TextView
+        android:id="@+id/txtShow2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="1111 world"
+        android:textSize="30dp"/>
+
+    <TextView
+        android:id="@+id/txtShow3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="2222 world"
+        android:textSize="30dp"/>
+
+
 </LinearLayout>

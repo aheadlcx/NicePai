@@ -5,15 +5,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 
 import java.util.List;
 
 import me.aheadlcx.nicepai.R;
-import me.aheadlcx.nicepai.databinding.ItemCateBinding;
 import me.aheadlcx.nicepai.model.service.response.cate.CateBean;
-import me.aheadlcx.nicepai.model.service.response.cate.ChannelEntity;
 
 /**
  * Description:
@@ -66,28 +65,37 @@ public class CateAdapter extends RecyclerView.Adapter<CateAdapter.CateHolder> {
         return lists.size();
     }
 
-    public static class CateHolder extends RecyclerView.ViewHolder{
-        private ItemCateBinding mBinding;
+    public static class CateHolder extends RecyclerView.ViewHolder {
         private ImageView imgCateItem;
         private View itemCate;
+        TextView txtCateItem;
+
         public CateHolder(View itemView) {
             super(itemView);
-            mBinding = ItemCateBinding.bind(itemView);
-            imgCateItem = mBinding.imgCateItem;
-            itemCate = mBinding.itemCate;
+            imgCateItem = (ImageView) itemView.findViewById(R.id.imgCateItem);
+            itemCate = itemView.findViewById(R.id.itemCate);
+            txtCateItem = (TextView) itemView.findViewById(R.id.txtCateItem);
         }
 
-        public void bind(CateBean bean){
-            if (null != mBinding && bean != null) {
-                mBinding.setCate(bean);
-                ChannelEntity.PicEntity pic = bean.getChannel().getPic();
-                Glide.with(itemView.getContext()).load(pic.getBase() + pic.getM()).into
-                        (imgCateItem);
+        public void bind(CateBean bean) {
+            if (bean != null) {
+//                ChannelEntity.PicEntity pic = bean.getChannel().getPic();
+
+                if (null != bean.getChannel() && null != bean.getChannel().getExt()) {
+                    txtCateItem.setText(bean.getChannel().getExt().getT());
+                    txtCateItem.setVisibility(View.VISIBLE);
+                } else {
+                    txtCateItem.setVisibility(View.GONE);
+                }
+                if (null != bean.getChannel() && null != bean.getChannel().getPic()) {
+                    Glide.with(itemView.getContext()).load(bean.getChannel().getPic().getBase() + bean.getChannel().getPic()
+                            .getM()).into(imgCateItem);
+                }
             }
         }
     }
 
-    public interface OnItemClickCallBack{
+    public interface OnItemClickCallBack {
         void onItemClick(CateBean cateBean);
     }
 }

@@ -1,8 +1,6 @@
 package me.aheadlcx.nicepai.ui.cate;
 
 import android.content.Intent;
-import android.databinding.DataBindingUtil;
-import android.databinding.ViewDataBinding;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.widget.SwipeRefreshLayout;
@@ -18,13 +16,20 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.inject.Inject;
+
 import fr.castorflex.android.circularprogressbar.CircularProgressBar;
+import me.aheadlcx.nicepai.App;
 import me.aheadlcx.nicepai.R;
 import me.aheadlcx.nicepai.base.BaseFragment;
-import me.aheadlcx.nicepai.databinding.FragCateBinding;
+import me.aheadlcx.nicepai.internal.di.component.CateComponent;
+import me.aheadlcx.nicepai.internal.di.component.DaggerCateComponent;
+import me.aheadlcx.nicepai.internal.di.modules.CateModule;
 import me.aheadlcx.nicepai.model.service.response.CateResponse;
 import me.aheadlcx.nicepai.model.service.response.cate.CateBean;
 import me.aheadlcx.nicepai.model.service.response.catelist.CateBaseInfo;
+import me.aheadlcx.nicepai.mvp.iui.CateUi;
+import me.aheadlcx.nicepai.mvp.present.CatePresent;
 import me.aheadlcx.nicepai.ui.CateDetailAct;
 import me.aheadlcx.nicepai.widget.RecycleViewAutoScrollHelper;
 import retrofit2.Response;
@@ -40,29 +45,48 @@ import rx.schedulers.Schedulers;
  * Creator: ZhangJinWei
  * Date:16/2/29 下午8:10
  */
-public class CateFrag extends BaseFragment {
+public class CateFrag extends BaseFragment implements CateUi {
     private static final String TAG = "CateFrag";
-    private android.widget.TextView txtContent;
-    FragCateBinding mBinding;
     RecyclerView mRecyclerView;
-    CateBaseInfo mCateBaseInfo;
+    public CateBaseInfo mCateBaseInfo;
     CircularProgressBar progressBar;
     View progressbarParent;
     Response<CateResponse> lastResponse;
     SwipeRefreshLayout swipeRefreshLayout;
     CateAdapter adapter;
+    TextView txtContent;
+    CircularProgressBar progress_bar;
+    View rootView;
+
+    @Inject
+    public CatePresent mPresent;
+    public CateComponent mCateComponent;
+    public CateModule mCateModule;
+
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        mCateModule = new CateModule("S");
+    }
+
+    public void initInject() {
+        mCateComponent = DaggerCateComponent.builder().applicationComponent(App.getApp().getApplicationComponent())
+                .cateModule(mCateModule).build();
+        mCateComponent.inject(this);
+        mPresent.setCateUi(this);
+    }
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         Log.i(TAG, "onCreateView: ");
-        if (mBinding != null) {
-            return mBinding.getRoot();
+        if (rootView != null) {
+            return rootView;
         }
-        ViewDataBinding binding = DataBindingUtil.inflate(inflater, R.layout.frag_cate, null, false);
-        initViews(binding.getRoot());
-        mBinding = (FragCateBinding) binding;
-        return binding.getRoot();
+        View view = inflater.inflate(R.layout.frag_cate, container, false);
+        initViews(view);
+        rootView = view;
+        return rootView;
     }
 
     public static CateFrag getInstance(Bundle bundle) {
@@ -88,9 +112,21 @@ public class CateFrag extends BaseFragment {
                 if (lastResponse != null) {
                     return;
                 }
-                initData();
+                initCateId();
+                initInject();
+
+//                initData();
+                initPresentData();
             }
         }
+    }
+
+    public void initCateId() {
+        mCateModule.setCateId(mCateBaseInfo.getCategoryId() + "");
+    }
+
+    private void initPresentData() {
+        mPresent.loadData(mCateModule.getCateId());
     }
 
     private void initData() {
@@ -151,10 +187,10 @@ public class CateFrag extends BaseFragment {
                         progressBar.setVisibility(View.GONE);
                         progressbarParent.setVisibility(View.GONE);
                         if (cateBeens == null) {
-                            mBinding.txtContent.setText("cateBeans size == 0");
+                            txtContent.setText("cateBeans size == 0");
                             return;
                         }
-                        mBinding.txtContent.setText("map success" + cateBeens.size());
+                        txtContent.setText("map success" + cateBeens.size());
                         fillData(cateBeens);
                     }
                 });
@@ -181,7 +217,7 @@ public class CateFrag extends BaseFragment {
                     getActivity().startActivity(intent);
                 }
             });
-        }else {
+        } else {
             adapter.setLists(cateBeens);
         }
 
@@ -190,7 +226,8 @@ public class CateFrag extends BaseFragment {
     private void onRefreshData() {
         lastResponse = null;
         swipeRefreshLayout.setRefreshing(true);
-        initData();
+//        initData();
+        mPresent.loadData("s");
     }
 
     private void initViews(View view) {
@@ -219,5 +256,18 @@ public class CateFrag extends BaseFragment {
         RecycleViewAutoScrollHelper scrollHelper = new RecycleViewAutoScrollHelper(mRecyclerView);
         scrollHelper.setEnabled(true);
         mRecyclerView.setOnTouchListener(scrollHelper);
+    }
+
+    @Override
+    public void fillCate(List<CateBean> cateBeens) {
+        swipeRefreshLayout.setRefreshing(false);
+        progressBar.setVisibility(View.GONE);
+        progressbarParent.setVisibility(View.GONE);
+        if (cateBeens == null) {
+            txtContent.setText("cateBeans size == 0");
+            return;
+        }
+        txtContent.setText("map success" + cateBeens.size());
+        fillData(cateBeens);
     }
 }

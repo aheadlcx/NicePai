@@ -79,15 +79,17 @@ public class CateMainAct extends BaseActivity {
 
                     @Override
                     public void onError(Throwable e) {
-                        Log.i(TAG, "onError: ");
+                        Log.i(TAG, "onError: " + e.getMessage() + e.toString());
                     }
 
                     @Override
                     public void onNext(List<CateBaseInfo> cateBaseInfos) {
-                        Log.i(TAG, "onNext: ");
                         if (cateBaseInfos == null) {
+                            Log.i(TAG, "onNext: ------ null");
                             return;
                         }
+                        Log.i(TAG, "onNext: size ==== " + cateBaseInfos.size());
+
                         setupViewPager(cateBaseInfos);
                     }
                 });
