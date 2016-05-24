@@ -27,8 +27,8 @@ public class HotCateDataRepository implements CateRepository {
     }
 
     @Override
-    public Observable<List<CateBean>> getCates(String cateId) {
-        return mHotCateService.getCateLists(cateId, "1", "300").map(new Func1<Response<CateResponse>, List<CateBean>>() {
+    public Observable<List<CateBean>> getCates(String cateId, String page) {
+        return mHotCateService.getCateLists(cateId, page, pagePer).map(new Func1<Response<CateResponse>, List<CateBean>>() {
             @Override
             public List<CateBean> call(Response<CateResponse> cateResponseResponse) {
                 return CateMapper.getCateBeen(cateResponseResponse);

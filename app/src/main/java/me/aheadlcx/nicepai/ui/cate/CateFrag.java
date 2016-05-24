@@ -32,6 +32,8 @@ import me.aheadlcx.nicepai.mvp.iui.CateUi;
 import me.aheadlcx.nicepai.mvp.present.CatePresent;
 import me.aheadlcx.nicepai.ui.CateDetailAct;
 import me.aheadlcx.nicepai.widget.RecycleViewAutoScrollHelper;
+import me.aheadlcx.nicepai.widget.loadmore.OnLoadMoreListener;
+import me.aheadlcx.nicepai.widget.loadmore.RecyclerViewWithFooter;
 import retrofit2.Response;
 import rx.Observable;
 import rx.Subscriber;
@@ -47,7 +49,7 @@ import rx.schedulers.Schedulers;
  */
 public class CateFrag extends BaseFragment implements CateUi {
     private static final String TAG = "CateFrag";
-    RecyclerView mRecyclerView;
+    RecyclerViewWithFooter mRecyclerView;
     public CateBaseInfo mCateBaseInfo;
     CircularProgressBar progressBar;
     View progressbarParent;
@@ -86,7 +88,18 @@ public class CateFrag extends BaseFragment implements CateUi {
         View view = inflater.inflate(R.layout.frag_cate, container, false);
         initViews(view);
         rootView = view;
+        initListeners();
         return rootView;
+    }
+
+    private void initListeners() {
+        mRecyclerView.setOnLoadMoreListener(new OnLoadMoreListener() {
+            @Override
+            public void onLoadMore() {
+                mPresent.loadMore();
+                mRecyclerView.setLoading();
+            }
+        });
     }
 
     public static CateFrag getInstance(Bundle bundle) {
@@ -231,7 +244,7 @@ public class CateFrag extends BaseFragment implements CateUi {
     }
 
     private void initViews(View view) {
-        mRecyclerView = (RecyclerView) view.findViewById(R.id.recycleView);
+        mRecyclerView = (RecyclerViewWithFooter) view.findViewById(R.id.recycleView);
         this.txtContent = (TextView) view.findViewById(R.id.txtContent);
         progressBar = (CircularProgressBar) view.findViewById(R.id.progress_bar);
         progressbarParent = view.findViewById(R.id.progressbarParent);
@@ -269,5 +282,6 @@ public class CateFrag extends BaseFragment implements CateUi {
         }
         txtContent.setText("map success" + cateBeens.size());
         fillData(cateBeens);
+        mRecyclerView.setEnd();
     }
 }

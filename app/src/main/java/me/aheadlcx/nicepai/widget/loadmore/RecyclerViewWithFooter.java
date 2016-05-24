@@ -4,17 +4,12 @@ import android.content.Context;
 import android.support.annotation.DrawableRes;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.RecyclerView.Adapter;
-import android.support.v7.widget.RecyclerView.AdapterDataObserver;
-import android.support.v7.widget.RecyclerView.LayoutManager;
-import android.support.v7.widget.RecyclerView.OnScrollListener;
-import android.support.v7.widget.RecyclerView.ViewHolder;
 import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.ViewGroup.LayoutParams;
+
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 
@@ -132,7 +127,7 @@ public class RecyclerViewWithFooter extends RecyclerView {
         public void onBindViewHolder(ViewHolder holder, int position) {
             if (isFootView(position)) {
                 if (RecyclerViewWithFooter.this.getLayoutManager() instanceof StaggeredGridLayoutManager) {
-                    LayoutParams layoutParams = holder.itemView.getLayoutParams();
+                    LayoutParams layoutParams = (LayoutParams) holder.itemView.getLayoutParams();
                     if (layoutParams instanceof StaggeredGridLayoutManager.LayoutParams) {
                         ((StaggeredGridLayoutManager.LayoutParams) layoutParams).setFullSpan(true);
                     }
@@ -176,7 +171,8 @@ public class RecyclerViewWithFooter extends RecyclerView {
         }
 
         public void onLoadMore() {
-            if (!RecyclerViewWithFooter.this.mIsGettingData && !RecyclerViewWithFooter.this.isLoadMoreEnable()) {
+//            if (!RecyclerViewWithFooter.this.mIsGettingData && !RecyclerViewWithFooter.this.isLoadMoreEnable()) {
+            if (!RecyclerViewWithFooter.this.mIsGettingData && RecyclerViewWithFooter.this.isLoadMoreEnable()) {
                 RecyclerViewWithFooter.this.mIsGettingData = true;
                 this.mOnLoadMoreListener.onLoadMore();
             }

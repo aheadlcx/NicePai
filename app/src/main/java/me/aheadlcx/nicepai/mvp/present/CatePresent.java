@@ -20,6 +20,7 @@ public class CatePresent {
     private static final String TAG = "CatePresent";
     private final Case mCateCase;
     private CateUi mCateUi;
+    private int curPage = 1;
 
     public void setCateUi(CateUi cateUi) {
         mCateUi = cateUi;
@@ -31,19 +32,29 @@ public class CatePresent {
     }
 
     public void loadData(String cateId) {
+        curPage = 1;
         mCateCase.execute(new CateSubscriber());
+    }
+
+    public void loadMore() {
+        mCateCase.execute(curPage + "", new CateSubscriber());
     }
 
     private class CateSubscriber extends DefaultSubscriber<List<CateBean>> {
 
         @Override
         public void onCompleted() {
+            curPage++;
             Log.i(TAG, "onCompleted: ");
             super.onCompleted();
         }
 
         @Override
         public void onError(Throwable e) {
+            curPage--;
+            if (curPage <= 1) {
+                curPage = 1;
+            }
             Log.i(TAG, "onError: ");
             super.onError(e);
         }

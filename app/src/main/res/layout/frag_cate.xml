@@ -49,11 +49,11 @@
             app:layout_behavior="@string/appbar_scrolling_view_behavior"
             >
 
-            <android.support.v7.widget.RecyclerView
+            <me.aheadlcx.nicepai.widget.loadmore.RecyclerViewWithFooter
                 android:id="@+id/recycleView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
-            </android.support.v7.widget.RecyclerView>
+            </me.aheadlcx.nicepai.widget.loadmore.RecyclerViewWithFooter>
         </android.support.v4.widget.SwipeRefreshLayout>
 
 

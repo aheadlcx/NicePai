@@ -26,7 +26,7 @@ public class CateCase extends Case {
     }
 
     @Override
-    protected Observable buildUseCaseObservable() {
-        return mCateRepository.getCates(mCateId);
+    protected Observable buildUseCaseObservable(String page) {
+        return mCateRepository.getCates(mCateId, page);
     }
 }

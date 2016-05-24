@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item type="id" name="rv_with_footer_empty_title">false</item>
+    <item type="id" name="rv_with_footer_empty_icon">false</item>
+    <item type="id" name="rv_with_footer_loading_progress">false</item>
+    <item type="id" name="rv_with_footer_loading_load">false</item>
+    <item type="id" name="rv_with_footer_loading_pull_to_load">false</item>
+    <item type="id" name="rv_with_footer_loading_end">false</item>
+</resources>

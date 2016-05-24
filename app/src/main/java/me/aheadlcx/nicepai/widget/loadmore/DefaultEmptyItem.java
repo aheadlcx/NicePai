@@ -7,7 +7,8 @@ import android.view.ViewGroup;
 import android.view.ViewGroup.LayoutParams;
 import android.widget.ImageView;
 import android.widget.TextView;
-import com.morecruit.uikit.R;
+
+import me.aheadlcx.nicepai.R;
 
 public class DefaultEmptyItem extends EmptyItem {
     private ImageView mEmptyImageView;

@@ -12,5 +12,6 @@ import rx.Observable;
  */
 public interface CateRepository extends BaseRepository {
 
-    public Observable<List<CateBean>> getCates(String cateId);
+    public Observable<List<CateBean>> getCates(String cateId, String page);
+    String pagePer = "5";
 }
