@@ -10,3 +10,4 @@
 /.buckd/
 /buck-out/
 /.idea
+/appframework/build/
