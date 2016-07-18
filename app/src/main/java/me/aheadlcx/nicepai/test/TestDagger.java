@@ -19,6 +19,7 @@ public class TestDagger {
     }
 
     public void show(){
+        // for test git rrevert
         Log.i(TAG, "show: ");
         Log.e(TAG, "show: ");
     }
