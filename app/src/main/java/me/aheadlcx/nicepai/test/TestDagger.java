@@ -21,6 +21,7 @@ public class TestDagger {
     public void show(){
         //from inden
         //from test
+        //from test just add
         Log.i(TAG, "show: ");
         Log.e(TAG, "show: ");
     }
