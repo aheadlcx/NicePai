@@ -240,7 +240,9 @@ public class RecyclerViewWithFooter extends RecyclerView {
                         int length = last.length;
                         for (int i = RecyclerViewWithFooter.STATE_END; i < length; i += RecyclerViewWithFooter.STATE_LOADING) {
                             int aLast = last[i];
-                            Log.i(RecyclerViewWithFooter.TAG, aLast + "    " + recyclerView.getAdapter().getItemCount());
+                            if (recyclerView != null && recyclerView.getAdapter() != null) {
+                                Log.i(RecyclerViewWithFooter.TAG, aLast + "    " + recyclerView.getAdapter().getItemCount());
+                            }
                             if (aLast >= recyclerView.getAdapter().getItemCount() - 1) {
                                 if (RecyclerViewWithFooter.this.mState == RecyclerViewWithFooter.STATE_PULL_TO_LOAD) {
                                     RecyclerViewWithFooter.this.setLoading();
