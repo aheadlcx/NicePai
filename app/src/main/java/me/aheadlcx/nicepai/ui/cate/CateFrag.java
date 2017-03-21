@@ -13,6 +13,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.google.android.flexbox.FlexDirection;
+import com.google.android.flexbox.FlexboxLayout;
+import com.google.android.flexbox.FlexboxLayoutManager;
+import com.google.android.flexbox.JustifyContent;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -256,9 +261,14 @@ public class CateFrag extends BaseFragment implements CateUi {
             }
         });
 
+//        mRecyclerView.setLayoutManager(new StaggeredGridLayoutManager(2,
+//                StaggeredGridLayoutManager.VERTICAL));
 
-        mRecyclerView.setLayoutManager(new StaggeredGridLayoutManager(2,
-                StaggeredGridLayoutManager.VERTICAL));
+        FlexboxLayoutManager flexboxLayoutManager = new FlexboxLayoutManager();
+        flexboxLayoutManager.setFlexDirection(FlexDirection.COLUMN);
+        flexboxLayoutManager.setJustifyContent(JustifyContent.FLEX_END);
+        mRecyclerView.setLayoutManager(flexboxLayoutManager);
+
         mRecyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {
             @Override
             public void onScrolled(RecyclerView recyclerView, int dx, int dy) {

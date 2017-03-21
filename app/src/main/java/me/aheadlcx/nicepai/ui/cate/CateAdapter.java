@@ -1,5 +1,7 @@
 package me.aheadlcx.nicepai.ui.cate;
 
+import android.content.Context;
+import android.support.v4.content.res.ResourcesCompat;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,6 +10,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.google.android.flexbox.AlignSelf;
+import com.google.android.flexbox.FlexboxLayoutManager;
 
 import java.util.List;
 
@@ -39,7 +43,8 @@ public class CateAdapter extends RecyclerView.Adapter<CateAdapter.CateHolder> {
 
     @Override
     public CateHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_cate, null);
+//        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_cate, null);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.viewholder_cate, null);
         CateHolder holder = new CateHolder(view);
         return holder;
     }
@@ -79,17 +84,28 @@ public class CateAdapter extends RecyclerView.Adapter<CateAdapter.CateHolder> {
 
         public void bind(CateBean bean) {
             if (bean != null) {
+                ViewGroup.LayoutParams lp = imgCateItem.getLayoutParams();
+                if (lp instanceof FlexboxLayoutManager.LayoutParams) {
+                    FlexboxLayoutManager.LayoutParams flexboxLp = (FlexboxLayoutManager.LayoutParams)
+                            imgCateItem.getLayoutParams();
+                    flexboxLp.setFlexGrow(1.0f);
+                    flexboxLp.setAlignSelf(AlignSelf.FLEX_END);
+                }
 //                ChannelEntity.PicEntity pic = bean.getChannel().getPic();
-
-                if (null != bean.getChannel() && null != bean.getChannel().getExt()) {
+                if (null != bean.getChannel() && null != bean.getChannel().getExt() && null != txtCateItem) {
                     txtCateItem.setText(bean.getChannel().getExt().getT());
                     txtCateItem.setVisibility(View.VISIBLE);
                 } else {
-                    txtCateItem.setVisibility(View.GONE);
+                    if (txtCateItem != null) {
+                        txtCateItem.setVisibility(View.GONE);
+                    }
                 }
+                Context context = imgCateItem.getContext();
+                imgCateItem.setImageDrawable(ResourcesCompat.getDrawable(context.getResources(),
+                        R.drawable.icon_test, null));
                 if (null != bean.getChannel() && null != bean.getChannel().getPic()) {
-                    Glide.with(itemView.getContext()).load(bean.getChannel().getPic().getBase() + bean.getChannel().getPic()
-                            .getM()).into(imgCateItem);
+//                    Glide.with(itemView.getContext()).load(bean.getChannel().getPic().getBase() + bean.getChannel().getPic()
+//                            .getM()).into(imgCateItem);
                 }
             }
         }
