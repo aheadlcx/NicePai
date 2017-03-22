@@ -19,7 +19,10 @@
 
 
         </activity>
-        <activity android:name=".ui.CateDetailAct">
+        <activity android:name=".ui.CateDetailAct"
+                  android:screenOrientation="portrait"
+            >
+            <!--android:screenOrientation="landscape"-->
 
         </activity>
 

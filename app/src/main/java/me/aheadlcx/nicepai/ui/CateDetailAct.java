@@ -2,10 +2,11 @@ package me.aheadlcx.nicepai.ui;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.util.Log;
 
-import com.wkzf.library.component.player.model.Video;
-import com.wkzf.library.component.player.model.VideoUrl;
-import com.wkzf.library.component.player.view.SuperVideoPlayer;
+import com.videoview.library.component.player.model.Video;
+import com.videoview.library.component.player.model.VideoUrl;
+import com.videoview.library.component.player.view.SuperVideoPlayer;
 
 import java.util.ArrayList;
 
@@ -18,7 +19,7 @@ import me.aheadlcx.nicepai.base.BaseActivity;
  * Date:16/3/2 下午4:10
  */
 public class CateDetailAct extends BaseActivity {
-
+    private static final String TAG = "CateDetailAct";
 
     private SuperVideoPlayer videoPlayer;
 
@@ -46,12 +47,12 @@ public class CateDetailAct extends BaseActivity {
         videoPlayer.setVideoPlayCallback(new SuperVideoPlayer.VideoPlayCallbackImpl() {
             @Override
             public void onCloseVideo() {
-
+                Log.i(TAG, "onCloseVideo: ");
             }
 
             @Override
             public void onSwitchPageType() {
-
+                Log.i(TAG, "onSwitchPageType: ");
             }
 
             @Override
