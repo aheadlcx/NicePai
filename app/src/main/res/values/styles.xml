@@ -8,4 +8,10 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="txtGuide">
+        <item name="android:textColor">#111111</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:background">#dfbf31</item>
+        <item name="android:gravity">center</item>
+    </style>
 </resources>
