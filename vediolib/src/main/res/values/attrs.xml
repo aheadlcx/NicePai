@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="WKClickView">
+
+        <attr name="normal_bg" format="reference"/>
+        <attr name="ripple_bg" format="reference"/>
+
+        <attr name="layout_style">
+            <!-- 矩形-->
+            <enum name="rectangle" value="0"/>
+            <!-- 椭圆或者椭圆-->
+            <enum name="oval" value="1"/>
+            <!-- 圆角-->
+            <enum name="round" value="2"/>
+            <!-- 半圆-->
+            <enum name="semicircle" value="3"/>
+        </attr>
+
+    </declare-styleable>
+
+    <declare-styleable name="CircleIndicator">
+        <attr name="ci_width" format="dimension"/>
+        <attr name="ci_height" format="dimension"/>
+        <attr name="ci_margin" format="dimension"/>
+        <attr name="ci_animator" format="reference"/>
+        <attr name="ci_animator_reverse" format="reference"/>
+        <attr name="ci_drawable" format="reference"/>
+        <attr name="ci_drawable_unselected" format="reference"/>
+    </declare-styleable>
+
+</resources>

@@ -31,8 +31,8 @@ android {
     }
     defaultConfig {
         applicationId "me.aheadlcx.nicepai"
-        minSdkVersion 14
-        targetSdkVersion 23
+        minSdkVersion rootProject.ext.androidMinSdkVersion
+        targetSdkVersion rootProject.ext.androidTargetSdkVersion
         versionCode 1
         versionName "1.0"
     }
@@ -67,7 +67,8 @@ dependencies {
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:appcompat-v7:23.2.0'
     compile 'com.android.support:recyclerview-v7:23.+'
-    compile 'com.github.xiongwei-git:wkzfLib:v2.1'
+//    compile 'com.github.xiongwei-git:wkzfLib:v2.1'
+    compile project(':vediolib')
     compile 'com.android.support:design:23.2.0'
     compile 'com.github.castorflex.smoothprogressbar:library-circular:1.2.0'
 
