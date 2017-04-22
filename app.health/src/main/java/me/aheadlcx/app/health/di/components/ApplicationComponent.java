@@ -1,10 +1,10 @@
-package me.aheadlcx.health.di.components;
+package me.aheadlcx.app.health.di.components;
 
 import javax.inject.Singleton;
 
 import dagger.Component;
-import me.aheadlcx.health.di.modules.ActivityModule;
-import me.aheadlcx.health.di.modules.ApplicationModule;
+import me.aheadlcx.app.health.di.modules.ActivityModule;
+import me.aheadlcx.app.health.di.modules.ApplicationModule;
 
 /**
  * Description:

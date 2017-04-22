@@ -1,4 +1,4 @@
-package me.aheadlcx.health.test;
+package me.aheadlcx.app.health.test;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -7,10 +7,10 @@ import android.view.View;
 import android.widget.TextView;
 
 import me.aheadlcx.health.R;
-import me.aheadlcx.health.base.BaseActivity;
-import me.aheadlcx.health.constant.HealthType;
-import me.aheadlcx.health.constant.IntentKey;
-import me.aheadlcx.health.ui.health.HealthNewsListAct;
+import me.aheadlcx.app.health.base.BaseActivity;
+import me.aheadlcx.app.health.constant.HealthType;
+import me.aheadlcx.app.health.constant.IntentKey;
+import me.aheadlcx.app.health.ui.health.HealthNewsListAct;
 
 /**
  * Description:

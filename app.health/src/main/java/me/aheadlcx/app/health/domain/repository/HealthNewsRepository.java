@@ -1,6 +1,6 @@
-package me.aheadlcx.health.domain.repository;
+package me.aheadlcx.app.health.domain.repository;
 
-import me.aheadlcx.health.constant.HealthType;
+import me.aheadlcx.app.health.constant.HealthType;
 import rx.Observable;
 import rx.Scheduler;
 

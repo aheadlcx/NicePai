@@ -1,4 +1,4 @@
-package me.aheadlcx.health.model;
+package me.aheadlcx.app.health.model;
 
 import java.util.List;
 

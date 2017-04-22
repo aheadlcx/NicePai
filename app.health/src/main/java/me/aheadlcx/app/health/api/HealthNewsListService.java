@@ -1,7 +1,7 @@
-package me.aheadlcx.health.api;
+package me.aheadlcx.app.health.api;
 
-import me.aheadlcx.health.model.HealthNewsDetailResponse;
-import me.aheadlcx.health.model.HealthNewsListResponse;
+import me.aheadlcx.app.health.model.HealthNewsDetailResponse;
+import me.aheadlcx.app.health.model.HealthNewsListResponse;
 import retrofit2.Call;
 import retrofit2.http.GET;
 import retrofit2.http.Query;

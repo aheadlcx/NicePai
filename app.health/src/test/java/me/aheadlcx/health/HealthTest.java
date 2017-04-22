@@ -17,10 +17,10 @@ import java.io.IOException;
 import java.net.URISyntaxException;
 import java.util.List;
 
-import me.aheadlcx.health.api.ApiUtils;
-import me.aheadlcx.health.api.HealthNewsListService;
-import me.aheadlcx.health.model.HealthNewsItem;
-import me.aheadlcx.health.model.HealthNewsListResponse;
+import me.aheadlcx.app.health.api.ApiUtils;
+import me.aheadlcx.app.health.api.HealthNewsListService;
+import me.aheadlcx.app.health.model.HealthNewsItem;
+import me.aheadlcx.app.health.model.HealthNewsListResponse;
 import retrofit2.Call;
 import retrofit2.Response;
 import retrofit2.Retrofit;

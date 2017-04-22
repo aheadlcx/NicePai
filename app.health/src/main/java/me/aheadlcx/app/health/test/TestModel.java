@@ -1,10 +1,10 @@
-package me.aheadlcx.health.test;
+package me.aheadlcx.app.health.test;
 
 import java.io.Serializable;
 import java.util.List;
 
 import io.realm.RealmList;
-import me.aheadlcx.health.model.HealthNewsItem;
+import me.aheadlcx.app.health.model.HealthNewsItem;
 
 /**
  * Description:

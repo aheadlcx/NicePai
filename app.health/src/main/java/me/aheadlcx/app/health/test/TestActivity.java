@@ -1,9 +1,9 @@
-package me.aheadlcx.health.test;
+package me.aheadlcx.app.health.test;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 
-import me.aheadlcx.health.base.BaseActivity;
+import me.aheadlcx.app.health.base.BaseActivity;
 
 /**
  * Description:

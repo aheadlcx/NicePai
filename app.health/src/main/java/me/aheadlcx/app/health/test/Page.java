@@ -1,4 +1,4 @@
-package me.aheadlcx.health.test;
+package me.aheadlcx.app.health.test;
 
 import com.google.gson.annotations.SerializedName;
 

@@ -1,4 +1,4 @@
-package me.aheadlcx.health;
+package me.aheadlcx.app;
 
 import android.os.Environment;
 import android.support.multidex.MultiDexApplication;
@@ -7,10 +7,10 @@ import java.io.File;
 
 import io.realm.Realm;
 import io.realm.RealmConfiguration;
-import me.aheadlcx.health.di.components.ApplicationComponent;
-import me.aheadlcx.health.di.components.DaggerApplicationComponent;
-import me.aheadlcx.health.di.modules.ApplicationModule;
-import me.aheadlcx.health.util.HealthSdk;
+import me.aheadlcx.app.health.di.components.ApplicationComponent;
+import me.aheadlcx.app.health.di.components.DaggerApplicationComponent;
+import me.aheadlcx.app.health.di.modules.ApplicationModule;
+import me.aheadlcx.app.health.util.HealthSdk;
 
 /**
  * Description:

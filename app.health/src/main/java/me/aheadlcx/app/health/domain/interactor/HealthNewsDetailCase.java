@@ -1,11 +1,11 @@
-package me.aheadlcx.health.domain.interactor;
+package me.aheadlcx.app.health.domain.interactor;
 
 import javax.inject.Inject;
 
-import me.aheadlcx.health.constant.HealthType;
-import me.aheadlcx.health.domain.executor.PostExecutionThread;
-import me.aheadlcx.health.domain.executor.ThreadExecutor;
-import me.aheadlcx.health.domain.repository.HealthNewsRepository;
+import me.aheadlcx.app.health.constant.HealthType;
+import me.aheadlcx.app.health.domain.executor.PostExecutionThread;
+import me.aheadlcx.app.health.domain.executor.ThreadExecutor;
+import me.aheadlcx.app.health.domain.repository.HealthNewsRepository;
 import rx.Observable;
 
 /**

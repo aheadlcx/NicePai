@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("me.aheadlcx.health.test", appContext.getPackageName());
+        assertEquals("me.aheadlcx.app.health.test", appContext.getPackageName());
     }
 }

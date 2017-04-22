@@ -1,16 +1,16 @@
-package me.aheadlcx.health.data.datasource;
+package me.aheadlcx.app.health.data.datasource;
 
 import android.util.Log;
 
 import java.util.List;
 
-import me.aheadlcx.health.api.ApiUtils;
-import me.aheadlcx.health.api.HealthNewsListService;
-import me.aheadlcx.health.constant.HealthConstant;
-import me.aheadlcx.health.constant.HealthType;
-import me.aheadlcx.health.domain.repository.HealthNewsRepository;
-import me.aheadlcx.health.model.HealthNewsItem;
-import me.aheadlcx.health.model.HealthNewsListResponse;
+import me.aheadlcx.app.health.api.ApiUtils;
+import me.aheadlcx.app.health.api.HealthNewsListService;
+import me.aheadlcx.app.health.constant.HealthConstant;
+import me.aheadlcx.app.health.constant.HealthType;
+import me.aheadlcx.app.health.domain.repository.HealthNewsRepository;
+import me.aheadlcx.app.health.model.HealthNewsItem;
+import me.aheadlcx.app.health.model.HealthNewsListResponse;
 import rx.Observable;
 import rx.Scheduler;
 import rx.functions.Func1;

@@ -1,4 +1,4 @@
-package me.aheadlcx.health.test;
+package me.aheadlcx.app.health.test;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -11,10 +11,10 @@ import java.util.List;
 import io.realm.Realm;
 import io.realm.RealmResults;
 import me.aheadlcx.health.R;
-import me.aheadlcx.health.base.BaseActivity;
-import me.aheadlcx.health.data.datasource.HealthNewsLocalRepo;
-import me.aheadlcx.health.model.HealthNewsItem;
-import me.aheadlcx.health.ui.health.HealthNewsAdapter;
+import me.aheadlcx.app.health.base.BaseActivity;
+import me.aheadlcx.app.health.data.datasource.HealthNewsLocalRepo;
+import me.aheadlcx.app.health.model.HealthNewsItem;
+import me.aheadlcx.app.health.ui.health.HealthNewsAdapter;
 
 /**
  * Description:

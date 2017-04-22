@@ -6,7 +6,7 @@
 
 
     <application
-        android:name="me.aheadlcx.app.health.MyApplication"
+        android:name="me.aheadlcx.app.MyApplication"
         android:allowBackup="true"
         android:label="@string/app_name"
         android:supportsRtl="true"

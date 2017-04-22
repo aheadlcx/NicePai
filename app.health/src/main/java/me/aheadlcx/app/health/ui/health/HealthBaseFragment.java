@@ -1,7 +1,7 @@
-package me.aheadlcx.health.ui.health;
+package me.aheadlcx.app.health.ui.health;
 
-import me.aheadlcx.health.base.BaseFragment;
-import me.aheadlcx.health.constant.HealthType;
+import me.aheadlcx.app.health.base.BaseFragment;
+import me.aheadlcx.app.health.constant.HealthType;
 
 /**
  * Description:

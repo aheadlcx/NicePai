@@ -1,12 +1,12 @@
-package me.aheadlcx.health.ui.health.detail;
+package me.aheadlcx.app.health.ui.health.detail;
 
 import javax.inject.Inject;
 
-import me.aheadlcx.health.constant.HealthType;
-import me.aheadlcx.health.di.Type;
-import me.aheadlcx.health.domain.interactor.Case;
-import me.aheadlcx.health.domain.interactor.DefaultSubscriber;
-import me.aheadlcx.health.model.HealthNewsDetailResponse;
+import me.aheadlcx.app.health.constant.HealthType;
+import me.aheadlcx.app.health.di.Type;
+import me.aheadlcx.app.health.domain.interactor.Case;
+import me.aheadlcx.app.health.domain.interactor.DefaultSubscriber;
+import me.aheadlcx.app.health.model.HealthNewsDetailResponse;
 
 /**
  * Description:

@@ -1,4 +1,4 @@
-package me.aheadlcx.health.data.repository;
+package me.aheadlcx.app.health.data.repository;
 
 import android.support.v4.util.ArrayMap;
 import android.util.Log;
@@ -10,14 +10,14 @@ import java.util.Map;
 
 import javax.inject.Inject;
 
-import me.aheadlcx.health.constant.HealthType;
-import me.aheadlcx.health.data.datasource.HealthKnowLoreRepo;
-import me.aheadlcx.health.data.datasource.HealthNewsLocalRepo;
-import me.aheadlcx.health.data.datasource.HealthNewsNetRepo;
-import me.aheadlcx.health.domain.repository.HealthNewsRepository;
-import me.aheadlcx.health.model.HealthNewsDetailResponse;
-import me.aheadlcx.health.model.HealthNewsItem;
-import me.aheadlcx.health.model.HealthNewsListResponse;
+import me.aheadlcx.app.health.constant.HealthType;
+import me.aheadlcx.app.health.data.datasource.HealthKnowLoreRepo;
+import me.aheadlcx.app.health.data.datasource.HealthNewsLocalRepo;
+import me.aheadlcx.app.health.data.datasource.HealthNewsNetRepo;
+import me.aheadlcx.app.health.domain.repository.HealthNewsRepository;
+import me.aheadlcx.app.health.model.HealthNewsDetailResponse;
+import me.aheadlcx.app.health.model.HealthNewsItem;
+import me.aheadlcx.app.health.model.HealthNewsListResponse;
 import rx.Observable;
 import rx.Scheduler;
 import rx.Subscriber;

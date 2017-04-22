@@ -1,4 +1,4 @@
-package me.aheadlcx.health.di.test;
+package me.aheadlcx.app.health.di.test;
 
 /**
  * Description:

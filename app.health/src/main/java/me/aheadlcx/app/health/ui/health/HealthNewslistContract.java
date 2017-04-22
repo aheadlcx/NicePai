@@ -1,8 +1,8 @@
-package me.aheadlcx.health.ui.health;
+package me.aheadlcx.app.health.ui.health;
 
 import java.util.List;
 
-import me.aheadlcx.health.model.HealthNewsItem;
+import me.aheadlcx.app.health.model.HealthNewsItem;
 
 /**
  * Description:

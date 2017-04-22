@@ -1,4 +1,4 @@
-package me.aheadlcx.health.constant;
+package me.aheadlcx.app.health.constant;
 
 /**
  * Description:

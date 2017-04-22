@@ -1,4 +1,4 @@
-package me.aheadlcx.health.api;
+package me.aheadlcx.app.health.api;
 
 /**
  * Description:

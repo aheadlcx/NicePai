@@ -1,6 +1,6 @@
-package me.aheadlcx.health.ui.health.detail;
+package me.aheadlcx.app.health.ui.health.detail;
 
-import me.aheadlcx.health.model.HealthNewsDetailResponse;
+import me.aheadlcx.app.health.model.HealthNewsDetailResponse;
 
 /**
  * Description:

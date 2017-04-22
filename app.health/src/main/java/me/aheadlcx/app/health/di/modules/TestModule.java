@@ -1,9 +1,9 @@
-package me.aheadlcx.health.di.modules;
+package me.aheadlcx.app.health.di.modules;
 
 import dagger.Module;
 import dagger.Provides;
-import me.aheadlcx.health.di.test.TestDi;
-import me.aheadlcx.health.di.test.TestDiImpl;
+import me.aheadlcx.app.health.di.test.TestDi;
+import me.aheadlcx.app.health.di.test.TestDiImpl;
 
 /**
  * Description:

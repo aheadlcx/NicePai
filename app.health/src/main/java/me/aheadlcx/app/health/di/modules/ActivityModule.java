@@ -1,10 +1,10 @@
-package me.aheadlcx.health.di.modules;
+package me.aheadlcx.app.health.di.modules;
 
 import android.app.Activity;
 
 import dagger.Module;
 import dagger.Provides;
-import me.aheadlcx.health.di.PerActivity;
+import me.aheadlcx.app.health.di.PerActivity;
 
 /**
  * Description:

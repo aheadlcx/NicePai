@@ -1,9 +1,9 @@
-package me.aheadlcx.health.di;
+package me.aheadlcx.app.health.di;
 
 import javax.inject.Inject;
 import javax.inject.Singleton;
 
-import me.aheadlcx.health.domain.executor.PostExecutionThread;
+import me.aheadlcx.app.health.domain.executor.PostExecutionThread;
 import rx.Scheduler;
 import rx.android.schedulers.AndroidSchedulers;
 

@@ -1,12 +1,12 @@
-package me.aheadlcx.health.constant;
+package me.aheadlcx.app.health.constant;
 
 import android.support.annotation.IntDef;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 
-import static me.aheadlcx.health.constant.HealthType.TYPE_INFO;
-import static me.aheadlcx.health.constant.HealthType.TYPE_LORE;
+import static me.aheadlcx.app.health.constant.HealthType.TYPE_INFO;
+import static me.aheadlcx.app.health.constant.HealthType.TYPE_LORE;
 
 /**
  * Description:

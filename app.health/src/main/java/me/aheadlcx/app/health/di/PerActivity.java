@@ -1,4 +1,4 @@
-package me.aheadlcx.health.di;
+package me.aheadlcx.app.health.di;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;

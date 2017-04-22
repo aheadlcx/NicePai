@@ -1,10 +1,10 @@
-package me.aheadlcx.health.ui.health;
+package me.aheadlcx.app.health.ui.health;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 
-import me.aheadlcx.health.base.BaseActivity;
-import me.aheadlcx.health.constant.IntentKey;
+import me.aheadlcx.app.health.base.BaseActivity;
+import me.aheadlcx.app.health.constant.IntentKey;
 
 /**
  * Description:

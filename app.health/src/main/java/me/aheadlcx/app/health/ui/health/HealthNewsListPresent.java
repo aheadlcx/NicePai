@@ -1,4 +1,4 @@
-package me.aheadlcx.health.ui.health;
+package me.aheadlcx.app.health.ui.health;
 
 import android.content.Context;
 import android.util.Log;
@@ -7,12 +7,12 @@ import java.util.List;
 
 import javax.inject.Inject;
 
-import me.aheadlcx.health.constant.HealthType;
-import me.aheadlcx.health.data.repository.HealthNewsDataRepository;
-import me.aheadlcx.health.di.Type;
-import me.aheadlcx.health.domain.interactor.Case;
-import me.aheadlcx.health.domain.interactor.DefaultSubscriber;
-import me.aheadlcx.health.model.HealthNewsItem;
+import me.aheadlcx.app.health.constant.HealthType;
+import me.aheadlcx.app.health.data.repository.HealthNewsDataRepository;
+import me.aheadlcx.app.health.di.Type;
+import me.aheadlcx.app.health.domain.interactor.Case;
+import me.aheadlcx.app.health.domain.interactor.DefaultSubscriber;
+import me.aheadlcx.app.health.model.HealthNewsItem;
 import rx.android.schedulers.AndroidSchedulers;
 import rx.schedulers.Schedulers;
 

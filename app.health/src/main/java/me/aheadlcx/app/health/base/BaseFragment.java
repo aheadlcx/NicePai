@@ -1,4 +1,4 @@
-package me.aheadlcx.health.base;
+package me.aheadlcx.app.health.base;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;

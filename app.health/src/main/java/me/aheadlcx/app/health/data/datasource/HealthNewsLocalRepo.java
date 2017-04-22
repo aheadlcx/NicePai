@@ -1,4 +1,4 @@
-package me.aheadlcx.health.data.datasource;
+package me.aheadlcx.app.health.data.datasource;
 
 import android.os.Looper;
 import android.util.Log;
@@ -8,10 +8,10 @@ import java.util.List;
 import io.realm.Realm;
 import io.realm.RealmQuery;
 import io.realm.RealmResults;
-import me.aheadlcx.health.constant.HealthType;
-import me.aheadlcx.health.domain.repository.HealthNewsRepository;
-import me.aheadlcx.health.model.HealthNewsDetailResponse;
-import me.aheadlcx.health.model.HealthNewsItem;
+import me.aheadlcx.app.health.constant.HealthType;
+import me.aheadlcx.app.health.domain.repository.HealthNewsRepository;
+import me.aheadlcx.app.health.model.HealthNewsDetailResponse;
+import me.aheadlcx.app.health.model.HealthNewsItem;
 import rx.Observable;
 import rx.Scheduler;
 import rx.Subscriber;

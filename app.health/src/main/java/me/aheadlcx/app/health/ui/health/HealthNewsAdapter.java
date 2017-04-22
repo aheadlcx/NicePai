@@ -1,4 +1,4 @@
-package me.aheadlcx.health.ui.health;
+package me.aheadlcx.app.health.ui.health;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
@@ -14,8 +14,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import me.aheadlcx.health.R;
-import me.aheadlcx.health.api.ApiConstant;
-import me.aheadlcx.health.model.HealthNewsItem;
+import me.aheadlcx.app.health.api.ApiConstant;
+import me.aheadlcx.app.health.model.HealthNewsItem;
 
 /**
  * Description:

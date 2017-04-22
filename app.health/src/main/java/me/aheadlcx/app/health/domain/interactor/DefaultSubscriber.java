@@ -1,4 +1,4 @@
-package me.aheadlcx.health.domain.interactor;
+package me.aheadlcx.app.health.domain.interactor;
 
 /**
  * Description:

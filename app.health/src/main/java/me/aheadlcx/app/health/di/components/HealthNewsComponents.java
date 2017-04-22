@@ -1,10 +1,10 @@
-package me.aheadlcx.health.di.components;
+package me.aheadlcx.app.health.di.components;
 
 import dagger.Subcomponent;
-import me.aheadlcx.health.di.PerActivity;
-import me.aheadlcx.health.di.modules.HealthNewsDetailModule;
-import me.aheadlcx.health.di.modules.HealthNewsModule;
-import me.aheadlcx.health.di.modules.HealthNewslistModule;
+import me.aheadlcx.app.health.di.PerActivity;
+import me.aheadlcx.app.health.di.modules.HealthNewsDetailModule;
+import me.aheadlcx.app.health.di.modules.HealthNewsModule;
+import me.aheadlcx.app.health.di.modules.HealthNewslistModule;
 
 /**
  * Description:

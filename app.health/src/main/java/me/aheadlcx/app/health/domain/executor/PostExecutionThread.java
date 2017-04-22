@@ -1,4 +1,4 @@
-package me.aheadlcx.health.domain.executor;
+package me.aheadlcx.app.health.domain.executor;
 
 import rx.Scheduler;
 

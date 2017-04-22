@@ -1,4 +1,4 @@
-package me.aheadlcx.health.ui.health.detail;
+package me.aheadlcx.app.health.ui.health.detail;
 
 import android.app.ActivityOptions;
 import android.os.Bundle;
@@ -14,14 +14,14 @@ import com.bumptech.glide.Glide;
 
 import javax.inject.Inject;
 
-import me.aheadlcx.health.MyApplication;
+import me.aheadlcx.app.MyApplication;
 import me.aheadlcx.health.R;
-import me.aheadlcx.health.api.ImageUtils;
-import me.aheadlcx.health.di.modules.ActivityModule;
-import me.aheadlcx.health.di.modules.HealthNewsDetailModule;
-import me.aheadlcx.health.di.modules.HealthNewsModule;
-import me.aheadlcx.health.model.HealthNewsDetailResponse;
-import me.aheadlcx.health.ui.health.HealthBaseFragment;
+import me.aheadlcx.app.health.api.ImageUtils;
+import me.aheadlcx.app.health.di.modules.ActivityModule;
+import me.aheadlcx.app.health.di.modules.HealthNewsDetailModule;
+import me.aheadlcx.app.health.di.modules.HealthNewsModule;
+import me.aheadlcx.app.health.model.HealthNewsDetailResponse;
+import me.aheadlcx.app.health.ui.health.HealthBaseFragment;
 
 /**
  * Description:

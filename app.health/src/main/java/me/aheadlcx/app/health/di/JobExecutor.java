@@ -1,4 +1,4 @@
-package me.aheadlcx.health.di;
+package me.aheadlcx.app.health.di;
 
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.LinkedBlockingQueue;
@@ -9,7 +9,7 @@ import java.util.concurrent.TimeUnit;
 import javax.inject.Inject;
 import javax.inject.Singleton;
 
-import me.aheadlcx.health.domain.executor.ThreadExecutor;
+import me.aheadlcx.app.health.domain.executor.ThreadExecutor;
 
 /**
  * Description:

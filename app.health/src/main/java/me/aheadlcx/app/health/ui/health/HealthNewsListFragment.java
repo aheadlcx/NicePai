@@ -1,4 +1,4 @@
-package me.aheadlcx.health.ui.health;
+package me.aheadlcx.app.health.ui.health;
 
 import android.app.ActivityOptions;
 import android.content.Intent;
@@ -19,15 +19,15 @@ import java.util.List;
 
 import javax.inject.Inject;
 
-import me.aheadlcx.health.MyApplication;
+import me.aheadlcx.app.MyApplication;
 import me.aheadlcx.health.R;
-import me.aheadlcx.health.constant.IntentKey;
-import me.aheadlcx.health.di.modules.ActivityModule;
-import me.aheadlcx.health.di.modules.HealthNewsModule;
-import me.aheadlcx.health.di.modules.HealthNewslistModule;
-import me.aheadlcx.health.model.HealthNewsItem;
-import me.aheadlcx.health.ui.health.detail.HealthNewsDetailActivity;
-import me.aheadlcx.health.util.DensityUtil;
+import me.aheadlcx.app.health.constant.IntentKey;
+import me.aheadlcx.app.health.di.modules.ActivityModule;
+import me.aheadlcx.app.health.di.modules.HealthNewsModule;
+import me.aheadlcx.app.health.di.modules.HealthNewslistModule;
+import me.aheadlcx.app.health.model.HealthNewsItem;
+import me.aheadlcx.app.health.ui.health.detail.HealthNewsDetailActivity;
+import me.aheadlcx.app.health.util.DensityUtil;
 import me.aheadlcx.lib.uikit.loadmore.OnLoadMoreListener;
 import me.aheadlcx.lib.uikit.loadmore.RecyclerViewWithFooter;
 

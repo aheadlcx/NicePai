@@ -1,4 +1,4 @@
-package me.aheadlcx.health.di.modules;
+package me.aheadlcx.app.health.di.modules;
 
 import dagger.Module;
 

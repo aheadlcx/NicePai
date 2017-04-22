@@ -1,4 +1,4 @@
-package me.aheadlcx.health.di.modules;
+package me.aheadlcx.app.health.di.modules;
 
 import android.content.Context;
 
@@ -6,13 +6,13 @@ import javax.inject.Singleton;
 
 import dagger.Module;
 import dagger.Provides;
-import me.aheadlcx.health.MyApplication;
-import me.aheadlcx.health.data.repository.HealthNewsDataRepository;
-import me.aheadlcx.health.di.JobExecutor;
-import me.aheadlcx.health.di.UiThread;
-import me.aheadlcx.health.domain.executor.PostExecutionThread;
-import me.aheadlcx.health.domain.executor.ThreadExecutor;
-import me.aheadlcx.health.domain.repository.HealthNewsRepository;
+import me.aheadlcx.app.MyApplication;
+import me.aheadlcx.app.health.data.repository.HealthNewsDataRepository;
+import me.aheadlcx.app.health.di.JobExecutor;
+import me.aheadlcx.app.health.di.UiThread;
+import me.aheadlcx.app.health.domain.executor.PostExecutionThread;
+import me.aheadlcx.app.health.domain.executor.ThreadExecutor;
+import me.aheadlcx.app.health.domain.repository.HealthNewsRepository;
 
 /**
  * Description:

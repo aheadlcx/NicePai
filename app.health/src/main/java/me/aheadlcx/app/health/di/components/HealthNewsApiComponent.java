@@ -1,10 +1,10 @@
-package me.aheadlcx.health.di.components;
+package me.aheadlcx.app.health.di.components;
 
 import javax.inject.Singleton;
 
 import dagger.Component;
-import me.aheadlcx.health.di.modules.HealthNewsApiModule;
-import me.aheadlcx.health.domain.repository.HealthNewsRepository;
+import me.aheadlcx.app.health.di.modules.HealthNewsApiModule;
+import me.aheadlcx.app.health.domain.repository.HealthNewsRepository;
 
 /**
  * Description:
