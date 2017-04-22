@@ -29,26 +29,31 @@ dependencies {
 //    compile 'com.android.support:appcompat-v7:25.1.0'
     testCompile 'junit:junit:4.12'
 
-    compile 'com.android.support:appcompat-v7:23.2.0'
-    compile 'com.android.support:recyclerview-v7:23.+'
 
-    compile 'com.android.support:design:23.2.0'
     compile 'com.github.castorflex.smoothprogressbar:library-circular:1.2.0'
 
     def nicepaeDependencies = rootProject.ext.nicepaeDependencies
     compile nicepaeDependencies.daggerCompiler
     compile nicepaeDependencies.dagger
+
     compile nicepaeDependencies.rxJava
     compile nicepaeDependencies.rxAndroid
+
     compile nicepaeDependencies.okHttp
     compile nicepaeDependencies.retrofit
     compile nicepaeDependencies.retrofitConverter
     compile nicepaeDependencies.retroRxAdapter
+
     compile nicepaeDependencies.glide
     compile nicepaeDependencies.oklog
 
     compile nicepaeDependencies.javaxAnnotation
     compile nicepaeDependencies.androidAnnotations
+
+    compile nicepaeDependencies.recyclerView
+    compile nicepaeDependencies.appcompat
+    compile nicepaeDependencies.design
+
 
     compile 'com.google.android:flexbox:0.2.5'
 
