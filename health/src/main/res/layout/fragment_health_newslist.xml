@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/app_color_gray"
+              android:orientation="vertical">
+
+
+    <me.aheadlcx.uilib.uikit.loadmore.RecyclerViewWithFooter
+        android:id="@+id/recycleView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </me.aheadlcx.uilib.uikit.loadmore.RecyclerViewWithFooter>
+</LinearLayout>
