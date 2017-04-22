@@ -4,8 +4,8 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/NicePai.iml" filepath="$PROJECT_DIR$/NicePai.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app.health/app.health.iml" filepath="$PROJECT_DIR$/app.health/app.health.iml" />
       <module fileurl="file://$PROJECT_DIR$/data/data.iml" filepath="$PROJECT_DIR$/data/data.iml" />
-      <module fileurl="file://$PROJECT_DIR$/health/health.iml" filepath="$PROJECT_DIR$/health/health.iml" />
       <module fileurl="file://$PROJECT_DIR$/lib.android/lib.android.iml" filepath="$PROJECT_DIR$/lib.android/lib.android.iml" />
       <module fileurl="file://$PROJECT_DIR$/lib.ui/lib.ui.iml" filepath="$PROJECT_DIR$/lib.ui/lib.ui.iml" />
       <module fileurl="file://$PROJECT_DIR$/lib.video/lib.video.iml" filepath="$PROJECT_DIR$/lib.video/lib.video.iml" />
