@@ -4,9 +4,9 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.util.Log;
 
-import com.videoview.library.component.player.model.Video;
-import com.videoview.library.component.player.model.VideoUrl;
-import com.videoview.library.component.player.view.SuperVideoPlayer;
+import com.videoview.lib.component.player.model.Video;
+import com.videoview.lib.component.player.model.VideoUrl;
+import com.videoview.lib.component.player.view.SuperVideoPlayer;
 
 import java.util.ArrayList;
 

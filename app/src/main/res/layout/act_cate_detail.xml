@@ -5,11 +5,11 @@
               android:layout_width="match_parent"
               android:layout_height="match_parent">
 
-    <com.videoview.library.component.player.view.SuperVideoPlayer
+    <com.videoview.lib.component.player.view.SuperVideoPlayer
         android:id="@+id/videoPlayer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-    </com.videoview.library.component.player.view.SuperVideoPlayer>
+    </com.videoview.lib.component.player.view.SuperVideoPlayer>
 
 </LinearLayout>

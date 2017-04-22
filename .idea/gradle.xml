@@ -9,7 +9,7 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
-            <option value="$PROJECT_DIR$/videolib" />
+            <option value="$PROJECT_DIR$/lib.video" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
