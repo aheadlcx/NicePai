@@ -7,8 +7,8 @@
       <module fileurl="file://$PROJECT_DIR$/data/data.iml" filepath="$PROJECT_DIR$/data/data.iml" />
       <module fileurl="file://$PROJECT_DIR$/health/health.iml" filepath="$PROJECT_DIR$/health/health.iml" />
       <module fileurl="file://$PROJECT_DIR$/lib.android/lib.android.iml" filepath="$PROJECT_DIR$/lib.android/lib.android.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lib.ui/lib.ui.iml" filepath="$PROJECT_DIR$/lib.ui/lib.ui.iml" />
       <module fileurl="file://$PROJECT_DIR$/lib.video/lib.video.iml" filepath="$PROJECT_DIR$/lib.video/lib.video.iml" />
-      <module fileurl="file://$PROJECT_DIR$/uilib/uilib.iml" filepath="$PROJECT_DIR$/uilib/uilib.iml" />
     </modules>
   </component>
 </project>

@@ -28,8 +28,8 @@ import me.aheadlcx.health.di.modules.HealthNewslistModule;
 import me.aheadlcx.health.model.HealthNewsItem;
 import me.aheadlcx.health.ui.health.detail.HealthNewsDetailActivity;
 import me.aheadlcx.health.util.DensityUtil;
-import me.aheadlcx.uilib.uikit.loadmore.OnLoadMoreListener;
-import me.aheadlcx.uilib.uikit.loadmore.RecyclerViewWithFooter;
+import me.aheadlcx.lib.uikit.loadmore.OnLoadMoreListener;
+import me.aheadlcx.lib.uikit.loadmore.RecyclerViewWithFooter;
 
 /**
  * Description:

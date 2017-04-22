@@ -1,4 +1,4 @@
-package me.aheadlcx.uilib;
+package me.aheadlcx.lib;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

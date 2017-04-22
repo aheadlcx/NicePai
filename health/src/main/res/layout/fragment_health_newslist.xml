@@ -6,10 +6,10 @@
               android:orientation="vertical">
 
 
-    <me.aheadlcx.uilib.uikit.loadmore.RecyclerViewWithFooter
+    <me.aheadlcx.lib.uikit.loadmore.RecyclerViewWithFooter
         android:id="@+id/recycleView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-    </me.aheadlcx.uilib.uikit.loadmore.RecyclerViewWithFooter>
+    </me.aheadlcx.lib.uikit.loadmore.RecyclerViewWithFooter>
 </LinearLayout>

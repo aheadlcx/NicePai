@@ -1,1 +1,1 @@
-include ':app', ':lib.video', ':lib.android',':health', ':uilib'
+include ':app', ':lib.video', ':lib.android',':health', ':lib.ui'

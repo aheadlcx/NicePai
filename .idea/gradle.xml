@@ -11,8 +11,8 @@
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/health" />
             <option value="$PROJECT_DIR$/lib.android" />
+            <option value="$PROJECT_DIR$/lib.ui" />
             <option value="$PROJECT_DIR$/lib.video" />
-            <option value="$PROJECT_DIR$/uilib" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
