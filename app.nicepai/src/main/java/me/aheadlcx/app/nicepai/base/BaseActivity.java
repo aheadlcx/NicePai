@@ -1,5 +1,6 @@
 package me.aheadlcx.app.nicepai.base;
 
+import android.support.v4.app.FragmentActivity;
 import android.support.v7.app.AppCompatActivity;
 
 import java.util.ArrayList;
@@ -18,7 +19,8 @@ import rx.Subscription;
  * Creator: ZhangJinWei
  * Date:16/2/29 下午8:07
  */
-public class BaseActivity extends AppCompatActivity {
+//public class BaseActivity extends AppCompatActivity {
+public class BaseActivity extends FragmentActivity {
     private List<Subscription> mSubscriptions = new ArrayList<>();
 
     public void addSubscription(Subscription subscription) {
