@@ -7,8 +7,9 @@ buildscript {
     dependencies {
 //        classpath 'com.android.tools.build:gradle:2.0.0'
         classpath 'com.android.tools.build:gradle:2.2.3'
+        classpath 'net.wequick.tools.build:gradle-small:1.2.0-beta3'
 
-        classpath "com.github.piasy:okbuck-gradle-plugin:1.0.0-beta8"
+//        classpath "com.github.piasy:okbuck-gradle-plugin:1.0.0-beta8"
 
         classpath "com.neenbedankt.gradle.plugins:android-apt:1.8"
 
@@ -37,14 +38,30 @@ task clean(type: Delete) {
     delete rootProject.buildDir
 }
 
-apply plugin: 'com.github.piasy.okbuck-gradle-plugin'
-okbuck {
-    target "android-23"
-    overwrite true
-    resPackages = [
-//            'base'    : 'com.github.piasy.base',
-//            'model'   : 'com.github.piasy.model',
-            'app'     : 'me.aheadlcx.nicepai',
-//            'testbase': 'com.github.piasy.base.test',
-    ]
+//apply plugin: 'com.github.piasy.okbuck-gradle-plugin'
+//okbuck {
+//    target "android-23"
+//    overwrite true
+//    resPackages = [
+////            'base'    : 'com.github.piasy.base',
+////            'model'   : 'com.github.piasy.model',
+//            'app'     : 'me.aheadlcx.nicepai',
+////            'testbase': 'com.github.piasy.base.test',
+//    ]
+//}
+
+apply plugin: 'net.wequick.small'
+
+small {
+    buildToAssets = false
+    aarVersion = '1.2.0-beta3'
+    android {
+        compileSdkVersion = 25
+        buildToolsVersion = "25.0.2"
+        supportVersion = "25.1.0"
+
+//        compileSdkVersion = rootProject.ext.androidCompileSdkVersion
+//        buildToolsVersion = rootProject.ext.androidBuildToolsVersion
+//        supportVersion = rootProject.ext.supportVersion
+    }
 }

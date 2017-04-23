@@ -1,5 +1,5 @@
-apply plugin: 'com.android.library'
-//apply plugin: 'com.android.application'
+//apply plugin: 'com.android.library'
+apply plugin: 'com.android.application'
 apply plugin: 'realm-android'
 //apply plugin: 'com.neenbedankt.android-apt'
 android {
@@ -24,7 +24,7 @@ android {
         }
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         // Enabling multidex support.
-        multiDexEnabled true
+//        multiDexEnabled true
 
     }
     buildTypes {
@@ -55,7 +55,7 @@ dependencies {
     testCompile dataTestDependencies.mockito
     testCompile dataTestDependencies.robolectric
     //end
-    compile 'com.android.support:multidex:1.0.1'
+//    compile 'com.android.support:multidex:1.0.1'
 
     compile project(':lib.android')
     compile project(':lib.ui')

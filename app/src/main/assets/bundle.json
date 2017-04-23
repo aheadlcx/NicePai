@@ -1,0 +1,13 @@
+{
+  "version": "1.0.0",
+  "bundles":[
+    {
+      "uri":"app.nicepai",
+      "pkg":"me.aheadlcx.app.nicepai"
+    },
+    {
+      "uri":"app.health",
+      "pkg":"me.aheadlcx.app.health"
+    }
+  ]
+}

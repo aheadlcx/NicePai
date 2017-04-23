@@ -3,7 +3,6 @@ package me.aheadlcx.app;
 import android.app.Application;
 import android.content.Context;
 import android.os.Environment;
-import android.support.multidex.MultiDexApplication;
 
 import java.io.File;
 
@@ -20,7 +19,7 @@ import me.aheadlcx.app.health.util.HealthSdk;
  * Date:2016/11/28 上午10:20
  */
 
-public class MyApplication extends MultiDexApplication {
+public class MyApplication extends Application {
     private ApplicationComponent applicationComponent;
     private static MyApplication instance;
     @Override

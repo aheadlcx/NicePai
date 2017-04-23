@@ -6,6 +6,8 @@ import android.support.annotation.Nullable;
 import android.view.View;
 import android.widget.TextView;
 
+import net.wequick.small.Small;
+
 import me.aheadlcx.app.nicepai.base.BaseActivity;
 import me.aheadlcx.nicepai.R;
 import me.aheadlcx.app.nicepai.ui.catelist.CateMainAct;
@@ -41,7 +43,8 @@ public class GuideAct extends BaseActivity {
     }
 
     private void gotoHealth(){
-        Intent intent = new Intent(this, me.aheadlcx.app.health.test.GuideAct.class);
-        this.startActivity(intent);
+//        Intent intent = new Intent(this, me.aheadlcx.app.health.test.GuideAct.class);
+//        this.startActivity(intent);
+        Small.openUri("app.health", GuideAct.this);
     }
 }

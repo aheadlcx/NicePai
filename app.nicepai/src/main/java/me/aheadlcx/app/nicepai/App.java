@@ -2,8 +2,6 @@ package me.aheadlcx.app.nicepai;
 
 import android.app.Application;
 
-import me.aheadlcx.app.MyApplication;
-import me.aheadlcx.app.health.util.HealthSdk;
 import me.aheadlcx.app.nicepai.internal.di.component.ApplicationComponent;
 import me.aheadlcx.app.nicepai.internal.di.component.DaggerApplicationComponent;
 import me.aheadlcx.app.nicepai.internal.di.modules.ApplicationModule;
@@ -26,15 +24,15 @@ public class App extends Application {
 //                .apiModule(new ApiModule())
                 .build();
         super.onCreate();
-        initHealth();
+//        initHealth();
     }
 
     private void initHealth() {
-        HealthSdk.initHealth(this);
-        MyApplication healthApp = new MyApplication();
-        healthApp.initComponent(this);
-        healthApp.initDb(this);
-        healthApp.setInstance(healthApp);
+//        HealthSdk.initHealth(this);
+//        MyApplication healthApp = new MyApplication();
+//        healthApp.initComponent(this);
+//        healthApp.initDb(this);
+//        healthApp.setInstance(healthApp);
     }
 
     public static App getApp() {
