@@ -66,4 +66,5 @@ dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile project(':lib.video')
     compile project(':lib.android')
+    compile project(':app.health')
 }

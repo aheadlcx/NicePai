@@ -18,6 +18,13 @@
             android:layout_width="@dimen/txt_width"
             android:layout_height="@dimen/txt_height"
             android:text="NicePai"/>
+        <TextView
+            android:id="@+id/txtHealth"
+            style="@style/txtGuide"
+            app:layout_flexGrow="1"
+            android:layout_width="@dimen/txt_width"
+            android:layout_height="@dimen/txt_height"
+            android:text="Health"/>
 
 
     </com.google.android.flexbox.FlexboxLayout>

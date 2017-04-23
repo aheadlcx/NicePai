@@ -13,11 +13,11 @@
 
     <!--<variable-->
     <!--name="cate"-->
-    <!--type="me.aheadlcx.nicepai.model.service.response.cate.CateBean"></variable>-->
+    <!--type="me.aheadlcx.app.nicepai.model.service.response.cate.CateBean"></variable>-->
 
     <!--<import type="android.text.TextUtils"/>-->
 
-    <!--<import type="me.aheadlcx.nicepai.util.Utils"/>-->
+    <!--<import type="me.aheadlcx.app.nicepai.util.Utils"/>-->
     <!--</data>-->
 
     <LinearLayout
@@ -30,7 +30,7 @@
         android:paddingRight="2dp"
         android:paddingTop="2dp">
 
-        <me.aheadlcx.nicepai.widget.SquareImageView
+        <me.aheadlcx.app.nicepai.widget.SquareImageView
             android:id="@+id/imgCateItem"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>

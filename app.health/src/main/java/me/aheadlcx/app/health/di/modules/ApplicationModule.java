@@ -22,9 +22,9 @@ import me.aheadlcx.app.health.domain.repository.HealthNewsRepository;
 
 @Module
 public class ApplicationModule {
-    private MyApplication mApplication;
+    private Context mApplication;
 
-    public ApplicationModule(MyApplication application) {
+    public ApplicationModule(Context application) {
         mApplication = application;
     }
 

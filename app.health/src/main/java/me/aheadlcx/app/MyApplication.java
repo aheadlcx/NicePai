@@ -1,5 +1,7 @@
 package me.aheadlcx.app;
 
+import android.app.Application;
+import android.content.Context;
 import android.os.Environment;
 import android.support.multidex.MultiDexApplication;
 
@@ -24,15 +26,18 @@ public class MyApplication extends MultiDexApplication {
     @Override
     public void onCreate() {
         super.onCreate();
-        HealthSdk.initHealth(this);
-        instance = this;
-         applicationComponent= DaggerApplicationComponent.builder().applicationModule(new ApplicationModule(this))
-                .build();
+//        instance = this;
+//        initComponent(this);
 
-        initDb();
+//        initDb(this);
     }
 
-    private void initDb() {
+    public void initComponent(Context context) {
+        applicationComponent= DaggerApplicationComponent.builder().applicationModule(new ApplicationModule(context))
+               .build();
+    }
+
+    public void initDb(Context context) {
 //        Realm.init(this);
         Environment.getExternalStorageState();
         String filePath = Environment.getExternalStorageDirectory().getPath() + File.separator + "nicelife";
@@ -40,7 +45,7 @@ public class MyApplication extends MultiDexApplication {
         if (!file.exists()){
             file.mkdirs();
         }
-        RealmConfiguration configuration =new RealmConfiguration.Builder(this)
+        RealmConfiguration configuration =new RealmConfiguration.Builder(context)
                 .build();
 //        Realm.deleteRealm(configuration);
         Realm.setDefaultConfiguration(configuration);
@@ -48,6 +53,10 @@ public class MyApplication extends MultiDexApplication {
 
     public static MyApplication getInstance() {
         return instance;
+    }
+
+    public static void setInstance(MyApplication outInstance) {
+        instance = outInstance;
     }
 
     public ApplicationComponent getApplicationComponent(){
