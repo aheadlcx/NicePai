@@ -1,4 +1,4 @@
-package me.aheadlcx.lib.uikit.loadmore;
+package me.aheadlcx.lib.ui.uikit.loadmore;
 
 import android.content.Context;
 import android.text.TextUtils;
@@ -8,7 +8,8 @@ import android.view.ViewGroup;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
-import me.aheadlcx.lib.R;
+import me.aheadlcx.lib.ui.R;
+
 
 public class DefaultFootItem extends FootItem {
     private static final String TAG = "DefaultFootItem";

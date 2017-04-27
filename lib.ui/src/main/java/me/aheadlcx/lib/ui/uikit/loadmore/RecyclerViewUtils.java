@@ -1,4 +1,4 @@
-package me.aheadlcx.lib.uikit.loadmore;
+package me.aheadlcx.lib.ui.uikit.loadmore;
 
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.GridLayoutManager.SpanSizeLookup;

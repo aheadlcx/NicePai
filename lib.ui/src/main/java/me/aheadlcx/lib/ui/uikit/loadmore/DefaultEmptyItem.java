@@ -1,4 +1,4 @@
-package me.aheadlcx.lib.uikit.loadmore;
+package me.aheadlcx.lib.ui.uikit.loadmore;
 
 import android.text.TextUtils;
 import android.view.LayoutInflater;
@@ -8,7 +8,8 @@ import android.view.ViewGroup.LayoutParams;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import me.aheadlcx.lib.R;
+import me.aheadlcx.lib.ui.R;
+
 
 public class DefaultEmptyItem extends EmptyItem {
     private ImageView mEmptyImageView;

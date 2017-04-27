@@ -1,4 +1,4 @@
-package me.aheadlcx.lib.uikit.loadmore;
+package me.aheadlcx.lib.ui.uikit.loadmore;
 
 import android.content.Context;
 import android.support.annotation.DrawableRes;

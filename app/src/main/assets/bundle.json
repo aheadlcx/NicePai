@@ -2,11 +2,11 @@
   "version": "1.0.0",
   "bundles":[
     {
-      "uri":"app.nicepai",
+      "uri":"main",
       "pkg":"me.aheadlcx.app.nicepai"
     },
     {
-      "uri":"app.health",
+      "uri":"health",
       "pkg":"me.aheadlcx.app.health"
     }
   ]

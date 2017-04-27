@@ -51,9 +51,7 @@ public class SmallApplication extends Application {
 
         }
 
-        @Override
         public void onProgressChanged(Context context, WebView view, int newProgress) {
-            super.onProgressChanged(context, view, newProgress);
 
             final ViewGroup parent = (ViewGroup) view.getParent();
             if (mBar == null) {
