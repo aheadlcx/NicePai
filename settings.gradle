@@ -1,1 +1,3 @@
-include ':app.nicepai', ':lib.video', ':lib.android', ':lib.ui', ':app' ,':app.health'
+include ':app.nicepai', ':lib.video', ':lib.android', ':lib.ui', ':app', ':app.home'
+//, ':app.health'
+//include ':lib.android', ':lib.ui', ':app', ':app.home'':lib.ui',

@@ -6,10 +6,12 @@ allprojects {
 
 ext {
     //Android
-    androidBuildToolsVersion = "23.0.2"
+//    androidBuildToolsVersion = "23.0.2"
+//    androidBuildToolsVersion = "24.0.1"
+    androidBuildToolsVersion = "25.0.2"
     androidMinSdkVersion = 14
     androidTargetSdkVersion = 21
-    androidCompileSdkVersion = 23
+    androidCompileSdkVersion = 24
     versionCode = 1
     versionName = 1
 
@@ -25,7 +27,10 @@ ext {
     androidAnnotationsVersion = '21.0.3'
     retrofitVersion = '2.0.2'
     glideVersion = '3.7.0'
-    supportVersion = '23.2.0'
+//    supportVersion = '23.2.0'
+
+//    supportVersion = '24+'
+    supportVersion = '25.1.0'
 
     //Testing
     robolectricVersion = '3.0'

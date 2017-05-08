@@ -1,5 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
@@ -13,5 +13,11 @@
         <item name="android:textSize">20sp</item>
         <item name="android:background">#dfbf31</item>
         <item name="android:gravity">center</item>
+    </style>
+    <style name="activity_translate_style" parent="@android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@anim/activity_translate_in</item>
+        <item name="android:activityOpenExitAnimation">@anim/activity_translate_out</item>
+        <item name="android:activityCloseEnterAnimation">@anim/activity_translate_close_in</item>
+        <item name="android:activityCloseExitAnimation">@anim/activity_translate_close_out</item>
     </style>
 </resources>

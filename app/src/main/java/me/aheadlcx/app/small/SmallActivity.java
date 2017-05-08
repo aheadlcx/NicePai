@@ -20,7 +20,7 @@ public class SmallActivity extends Activity {
         Small.setUp(this, new Small.OnCompleteListener() {
             @Override
             public void onComplete() {
-                Small.openUri("mian", SmallActivity.this);
+                Small.openUri("home", SmallActivity.this);
                 SmallActivity.this.finish();
             }
         });

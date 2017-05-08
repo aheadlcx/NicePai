@@ -11,3 +11,4 @@
 /buck-out/
 /.idea
 /app/smallLibs/
+/build-small/

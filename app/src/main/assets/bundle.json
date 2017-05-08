@@ -2,12 +2,32 @@
   "version": "1.0.0",
   "bundles":[
     {
-      "uri":"main",
-      "pkg":"me.aheadlcx.app.nicepai"
+      "uri":"home",
+      "pkg":"me.aheadlcx.app.home"
+    },
+    {
+      "uri":"lib.ui",
+      "pkg":"me.aheadlcx.lib.ui"
+    },
+    {
+      "uri":"lib.android",
+      "pkg":"me.aheadlcx.lib.android"
+    },
+    {
+      "uri":"lib.video",
+      "pkg":"com.videoview.lib",
+      "type":"lib"
     },
     {
       "uri":"health",
-      "pkg":"me.aheadlcx.app.health"
+      "pkg":"me.aheadlcx.app.health",
+      "type":"app"
+    },
+    {
+      "uri":"nicepai",
+      "pkg":"me.aheadlcx.app.nicepai",
+      "type":"app"
     }
+
   ]
 }
